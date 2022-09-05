@@ -1,0 +1,215 @@
+Store {
+  background-color: rgb(201, 201, 201);
+}
+
+navbar {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  background-color: rgb(210, 234, 254);
+  margin-bottom: 10px;
+}
+
+navbar #logo_img {
+  content: url("./Image/logo.jpg");
+  width: 130px;
+}
+
+navbar #nav {
+  padding: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+navbar #nav:hover {
+  background-color: white;
+}
+
+navbar title {
+  font-size: 40px;
+}
+
+moto {
+  font-size: 25px;
+}
+
+navbar company {
+  display: grid;
+  margin-left: 12%;
+  text-align: center;
+}
+
+card {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 50px;
+}
+
+giftcard {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+card topseller {
+  grid-column: span 4;
+  margin-bottom: 10px;
+}
+
+card topseller giftcard {
+  display: grid;
+  grid-template-columns: 800px auto;
+}
+
+topseller giftcard name {
+  font-size: 30px;
+  text-align: initial;
+}
+
+topseller giftcard #button {
+  grid-column: 2;
+  margin-right: 20px;
+}
+
+giftcard name {
+  font-size: 30px;
+  text-align: center;
+}
+
+card topseller giftcard img {
+  width: 500px;
+  grid-column: 1;
+  margin-left: initial;
+}
+
+card topseller giftcard detail {
+  grid-column: 2;
+  display: grid;
+  font-size: 20px;
+}
+
+#MLBB_img {
+  content: url("./Image/ml.jpg");
+}
+
+#KFC_img {
+  content: url("./Image/kfc.jpg");
+}
+
+country::before {
+  content: "Country: ";
+}
+
+cost::before {
+  content: "Cost: ";
+}
+
+availability::before {
+  content: "Availability: ";
+}
+
+discount::before {
+  content: "Discount: ";
+}
+
+avilablecards::before {
+  content: "Available Cards: ";
+}
+
+customers::before {
+  content: "Customers: ";
+}
+
+description::before {
+  content: "Description: ";
+}
+
+rating::before {
+  content: "Rating: ";
+}
+
+giftcard {
+  display: grid;
+  border: 1px solid black;
+  background-color: rgb(204, 204, 204);
+  font-size: 20px;
+}
+
+giftcard #button {
+  justify-self: flex-end;
+  font-size: 25px;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+giftcard #button:hover {
+  background-color: white;
+}
+
+card giftcard img {
+  width: 350px;
+  margin-left: 10%;
+}
+
+#Paypal_img {
+  content: url("./Image/paypal.jpg");
+}
+
+#discord_img {
+  content: url("./Image/discord.jpg");
+}
+
+#dominos_img {
+  content: url("./Image/pizza.jpg");
+}
+
+#XBOX_img {
+  content: url("./Image/xbox.jpg");
+}
+
+footer {
+  font-size: 20px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(210, 234, 254);
+}
+
+footer store {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 30px;
+}
+
+footer address {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+footer phone {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+footer facebook {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+footer instagram {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+footer website {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+footer email {
+  grid-column: 3;
+  grid-row: 2;
+}

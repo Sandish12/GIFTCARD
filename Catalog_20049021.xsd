@@ -1,0 +1,170 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Store" type="StoreType">
+    <xs:annotation>
+      <xs:documentation>
+    Author: Sandish Dangol
+    London Met: 20049021
+    Date: 03/25/2022
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="logoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="homeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="supportType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="mycardType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="refillType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="companyType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title" />
+      <xs:element type="xs:string" name="moto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="navbarType">
+    <xs:sequence>
+      <xs:element type="logoType" name="logo" />
+      <xs:element type="homeType" name="home" />
+      <xs:element type="supportType" name="support" />
+      <xs:element type="mycardType" name="mycard" />
+      <xs:element type="refillType" name="refill" />
+      <xs:element type="companyType" name="company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="imgType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional" />
+        <xs:attribute type="xs:string" name="src" use="optional" />
+        <xs:attribute type="xs:string" name="alt" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="detailType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="country" />
+      <xs:element type="xs:string" name="cost" />
+      <!-- <xs:element type="xs:string" name="availability" /> -->
+      <xs:element name="availability">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Available" />
+            <xs:enumeration value="UnAvailable" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="discount">
+        <xs:annotation>
+          <xs:documentation> discount us optional discount us optional</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:float" name="avilablecards" />
+      <xs:element type="xs:string" name="customers" />
+      <xs:element type="xs:string" name="description" />
+      <xs:element type="xs:float" name="rating">
+        <xs:annotation>
+          <xs:documentation> review is also optional review is also optional</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="btnType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="giftcardType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name" />
+      <xs:element type="imgType" name="img" />
+      <xs:element type="detailType" name="detail" minOccurs="0" />
+      <xs:element type="xs:string" name="country" minOccurs="0" />
+      <xs:element type="xs:string" name="cost" minOccurs="0" />
+      <xs:element type="xs:string" name="availability" minOccurs="0" />
+      <xs:element type="xs:string" name="discount" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> discount us optional discount us optional discount us optional discount us optional</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:float" name="avilablecards" minOccurs="0" />
+      <xs:element type="xs:string" name="customers" minOccurs="0" />
+      <xs:element type="xs:string" name="description" minOccurs="0" />
+      <xs:element type="xs:float" name="rating" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> review is also optional review is also optional review is also optional review is also optional</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="btnType" name="btn" />
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional" />
+    <xs:attribute type="xs:string" name="type" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="topsellerType">
+    <xs:sequence>
+      <xs:element type="giftcardType" name="giftcard" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cardType">
+    <xs:sequence>
+      <xs:element type="topsellerType" name="topseller" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element type="giftcardType" name="giftcard" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="footerType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="store" />
+      <xs:element type="xs:string" name="address" />
+      <xs:element type="xs:float" name="phone" />
+      <xs:element type="xs:string" name="facebook" />
+      <xs:element type="xs:string" name="instagram" />
+      <xs:element type="xs:string" name="website" />
+      <xs:element type="xs:string" name="email" />
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" />
+  </xs:complexType>
+  <xs:complexType name="StoreType">
+    <xs:sequence>
+      <xs:element type="navbarType" name="navbar">
+        <xs:annotation>
+          <xs:documentation> navigation bar </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="cardType" name="card" />
+      <xs:element type="footerType" name="footer">
+        <xs:annotation>
+          <xs:documentation>footer </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

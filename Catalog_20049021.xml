@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Catalog_20049021.css" type="text/css"?>
+<!--
+    Author: Sandish Dangol
+    London Met: 20049021
+    Date: 03/25/2022
+-->
+<Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_20049021.xsd">
+  
+  <!-- navigation bar -->
+  <navbar>
+    <logo id="logo_img"></logo>
+    <home id="nav">Home</home>
+    <support id="nav">Support</support>
+    <mycard id="nav">Cart</mycard>
+    <refill id="nav">Refill</refill>
+    <company>
+      <title>Newa's Gift Store</title>
+      <moto>A card thats gifts.</moto>
+    </company>
+  </navbar>
+
+  <card>
+    <topseller>
+      <giftcard id="MLBB" type="Digital">
+        <name> MLBB Gift Card </name>
+        <img id="MLBB_img" src="ml.jpg" alt="" />
+        <detail>
+          <country> UK </country>
+          <cost> 40$ </cost>
+          <availability>Available</availability>
+          <!-- discount us optional-->
+          <discount>25% off (For regular customers)</discount>
+          <avilablecards> 60 </avilablecards>
+          <customers> 2k </customers>
+          <description>
+            <![CDATA[Creating an easy way of purchasing any skins for the gift card users at anytime and anyplace.]]>
+          </description>
+          <!-- review is also optional-->
+          <rating> 7 </rating>
+        </detail>
+        <btn id="button"> BuyNow</btn>
+      </giftcard>
+    </topseller>
+
+    <topseller>
+      <giftcard id="KFC" type="Physical">
+        <name> KFC Gift Card </name>
+        <img id="KFC_img" src="kfc.jpg" alt="" />
+        <detail>
+          <country> UK </country>
+          <cost> 65$ </cost>
+          <availability>UnAvailable</availability>
+          <!-- discount us optional-->
+          <discount> 8% off </discount>
+          <avilablecards> 0 </avilablecards>
+          <customers> 200k </customers>
+          <description>
+            <![CDATA[The new way of paying the bills to enjoy meal with friends and family without carrying any money.]]>
+          </description>
+          <!-- review is also optional-->
+          <rating> 9.2 </rating>
+        </detail>
+        <btn id="button"> BuyNow</btn>
+      </giftcard>
+    </topseller>
+
+
+    <giftcard id="PAY" type="Digital">
+      <name> Paypal Gift Card </name>
+      <img id="Paypal_img" src="paypal.jpg" alt="" />
+      <country> UK </country>
+      <cost> 45$</cost>
+      <availability>Available</availability>
+      <!-- discount us optional-->
+      <discount>8% off </discount>
+      <avilablecards> 35 </avilablecards>
+      <customers> 2M </customers>
+      <description>
+        <![CDATA[To give and get gifts for different kinds of parties or celebrations incase of not having any physical gift.]]>
+      </description>
+      <!-- review is also optional-->
+      <rating> 8 </rating>
+      <btn id="button"> BuyNow</btn>
+    </giftcard>
+
+    <giftcard id="DIC" type="Digital">
+      <name> Discord Gift Card </name>
+
+      <img id="discord_img" src="discord.jpg" alt="" />
+
+      <country> UK </country>
+      <cost> 10$</cost>
+      <availability>Available</availability>
+      <!-- discount us optional-->
+      <discount>8% off </discount>
+      <avilablecards>  22 </avilablecards>
+      <customers> 3.1k </customers>
+      <description>
+        <![CDATA[Creating an easy way of boosting the server for the creators and gamers to communicate with their friends.]]>
+      </description>
+      <!-- review is also optional-->
+      <rating> 8.5 </rating>
+      <btn id="button"> BuyNow</btn>
+    </giftcard>
+
+    <giftcard id="DP" type="physical">
+      <name> Domino's pizza Gift Card </name>
+
+      <img id="dominos_img" src="pizza.jpg" alt="" />
+
+      <country> UK </country>
+      <cost> 50$</cost>
+      <availability>Available</availability>
+      <!-- discount us optional-->
+      <discount>8% off </discount>
+      <avilablecards> 90 </avilablecards>
+      <customers> 188.5k </customers>
+      <description>
+        <![CDATA[Creating an easy way of paying for any kind of pizza's through card insted of physical money.]]>
+      </description>
+      <!-- review is also optional-->
+      <rating> 7.8 </rating>
+      <btn id="button"> BuyNow</btn>
+    </giftcard>
+
+    <giftcard id="MLBB" type="Digital">
+      <name> XBOX 360 Gift Card </name>
+
+      <img id="XBOX_img" src="xbox.jpg" alt="" />
+
+      <country> UK </country>
+      <cost> 50$</cost>
+      <availability>Available</availability>
+      <!-- discount us optional-->
+      <discount>8% off </discount>
+      <avilablecards> 15 </avilablecards>
+      <customers> 3k </customers>
+      <description>
+        <![CDATA[Creating an easy way of purchasing any games that anyone uses XBOX.]]>
+          </description>
+      <!-- review is also optional-->
+      <rating> 9 </rating>
+      <btn id="button"> BuyNow</btn>
+    </giftcard>
+
+  </card>
+  <!--footer -->
+  <footer id="footer">
+    <store>Newa's Gift Card </store>
+    <address> London </address>
+    <phone>  9849277004 </phone>
+    <facebook> Facebook (Newa's Gift Card) </facebook>
+    <instagram> Instagram (Newa's Gift Card) </instagram>
+    <website> newagiftcard.com</website>
+    <email> newagiftcard@gmail.com</email>
+  </footer>
+</Store>
